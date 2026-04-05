@@ -2,6 +2,8 @@
     --bg-dark: #12110f;
     --bg-lighter: #1c1a18;
     --bg-lightest: #24221f;
+    --gold: #c9a66b;
+    --gold-hover: #d4b07c;
     --text-main: #f4f4f4;
     --text-muted: #8a8885;
     --border-color: rgba(255, 255, 255, 0.8);
@@ -23,4 +25,192 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
+.top-bar {
+    background-color: #0a0908;
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+}
+.top-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.top-bar-left {
+    display: flex;
+    gap: 20px;
+}
+.top-bar-right {
+    display: flex;
+    gap: 20px;
+}
+.top-bar-left span{
+    margin-right: 20px;
+}
+.top-bar-right a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+.top-bar-right a:hover {
+    color: var(--gold);
+}
 
+.navbar {
+    background: linear-gradient(to bottom, rgba(18,17,15,0.9)0%, rgba(18,17,15,0)100%);
+    padding: 25px 50px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 35px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    z-index: 10;
+}
+.navbar .logo {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    color: var(--gold);
+    text-decoration: none;
+    transition: var(--transition-fast);
+    font-weight: 400;
+    letter-spacing: 3px;
+
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.nav-links a{
+    text-decoration: none;
+    color: var(--text-main);
+    transition: var(--transition-fast);
+    font-size: 14px;
+    letter-spacing: 2px;
+    position: relative;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--gold);
+    left: 0;
+    bottom: -5px;
+    transition: var(--transition-fast);
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+.nav-links a:hover {
+    color: var(--gold);
+}
+.nav-btn {
+    background-color: var(--gold);
+    color: var(--bg-dark);
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: var(--transition-fast);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.nav-btn:hover {
+    background-color: var(--gold-hover);
+}
+
+.hero {
+    height: 100vh;
+    background: url(img/bg.jpg) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -4px;
+    position: relative;
+    color: var(--text-main);
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( rgba(18,17,15,0.5), rgba(18,17,15,0.4));
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+.hero-subtitle {
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    display: block;
+    margin-top: 15px;
+}
+.hero h1{
+    font-family: var(--font-serif);
+    font-weight: 400;
+    margin-bottom: 25px;
+    font-size: 96px;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.hero p {
+    color: var(--text-main);
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.hero-primary-btn{
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: var(--transition-fast);
+    font-size: 16px;
+    letter-spacing: 2px;
+    border: 1px solid var(--gold);
+    background: transparent;
+}
+.hero-primary-btn:hover {
+    background-color: var(--gold);
+    color: var(--bg-dark);
+}
+.hero-secondary-btn {
+    
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: var(--transition-fast);
+    font-size: 16px;
+    letter-spacing: 2px;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+}
+.hero-secondary-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
