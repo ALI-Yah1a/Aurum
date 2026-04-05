@@ -1,0 +1,26 @@
+:root {
+    --bg-dark: #12110f;
+    --bg-lighter: #1c1a18;
+    --bg-lightest: #24221f;
+    --text-main: #f4f4f4;
+    --text-muted: #8a8885;
+    --border-color: rgba(255, 255, 255, 0.8);
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Lato', sans-serif;
+    --transition-fast: 0.3s ease;
+    --transition-slow: 0.6s ease;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
